@@ -1,4 +1,4 @@
-const webpackConfig = require('./webpack.config.js');
+const webpackConfig = require('./webpack.config.js')
 delete webpackConfig.entry
 
 module.exports = function(config) {
@@ -22,5 +22,5 @@ module.exports = function(config) {
     browsers: ['PhantomJS'],
     singleRun: false,
     concurrency: Infinity
-  });
-};
+  })
+}
