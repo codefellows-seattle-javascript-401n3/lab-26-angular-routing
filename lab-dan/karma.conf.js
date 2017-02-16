@@ -1,8 +1,10 @@
 // Karma configuration
 // Generated on Wed Feb 15 2017 22:20:17 GMT-0800 (PST)
-
+const webpack = require('./webpack.config.js')
+delete webpack.entry
 module.exports = function(config) {
   config.set({
+    webpack,
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
@@ -27,13 +29,14 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'test/**/*-test.js': ['webpack']
     },
 
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['mocha'],
 
 
     // web server port
@@ -55,8 +58,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'PhantomJS'],
-
+    browsers: ['PhantomJS'],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
