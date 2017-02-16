@@ -10,9 +10,27 @@ h1, h2 {
   text-align: center;
 }
 
+footer {
+  text-align: center;
+}
+
+a {
+  color: $white;
+  margin: 1em;
+}
+
+a:hover {
+  color: $secondary-color;
+}
+
 .content {
   color: $black;
   background: $white;
   padding: 1em;
   margin: 0 auto;
+}
+
+// http://stackoverflow.com/questions/28514241/angularjs-how-to-prevent-code-flash-in-page-while-loading
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
 }

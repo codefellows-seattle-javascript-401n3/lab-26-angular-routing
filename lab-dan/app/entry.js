@@ -5,6 +5,7 @@ require('./scss/main.scss')
 const angular = require('angular')
 const uiRouter = require('angular-ui-router')
 const path = require('path')
+const camelcase = require('camelcase')
 const pascalcase = require('pascalcase')
 
 // oh hey, here's a module dependency
