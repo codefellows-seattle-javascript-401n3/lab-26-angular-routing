@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="routingExampleModule" ng-strict-di>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, inital-scale=1" />
+  <title>UI Routing Example App</title>
+</head>
+<body>
+  <header>
+    <h1>Routing Example App</h1>
+    <nav>
+      <a href="/#!/home">Home</a>
+      <a href="/#!/signup">Signup</a>
+      <a href="/#!/gallery">Gallery</a>
+    </nav>
+  </header>
+  <main>
+    <ui-view></ui-view>
+  </main>
+  <footer>
+    <p>
+      Oh hey! Here's the footer. It's v important.
+    </p>
+  </footer>
+</body>
+</html>

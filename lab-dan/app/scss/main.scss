@@ -1,0 +1,18 @@
+@import "reset.scss";
+@import "vars.scss";
+
+html {
+  color: $white;
+  background: $primary-color;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.content {
+  color: $black;
+  background: $white;
+  padding: 1em;
+  margin: 0 auto;
+}
