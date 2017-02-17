@@ -1,8 +1,8 @@
 'use strict';
 
-require('./lib/test-setup.js');
+// require('./lib/test-setup.js');
 
-const angular = require('angular');
+// const angular = require('angular');
 
 describe('Home Controller', function() {
   beforeEach(() => {

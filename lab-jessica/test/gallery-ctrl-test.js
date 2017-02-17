@@ -2,7 +2,7 @@
 
 require('./lib/test-setup.js');
 
-const angular = require('angular');
+// const angular = require('angular');
 
 describe('Gallery Controller', function() {
   beforeEach(() => {
