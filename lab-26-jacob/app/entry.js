@@ -1,5 +1,3 @@
-'use strict';
-
 require('./scss/main.scss');
 
 const path = require('path');
@@ -14,7 +12,7 @@ const routesApp = angular.module('routesApp', [uiRouter]);
 
 
 //this registers our routes with routesApp
-let context = require.context('./config/', true, /\.js$/); //making routing functionality happen in the /config folder
+var context = require.context('./config/', true, /\.js$/); //making routing functionality happen in the /config folder
 //webpack context provider will register each controller.
 context.keys().forEach(key => {
   routesApp.config(context(key));
@@ -23,7 +21,7 @@ context.keys().forEach(key => {
 //pointing require.context to the view directory.
 context = require.context('./view/', true, /\.js$/);
 context.keys().forEach( key => {
-  let name = pascalcase(path.basename(key, '.js'));
+  var name = pascalcase(path.basename(key, '.js'));
   routesApp.controller(name, context(key));
   //registers a controller for routesApp. this is some magic that loads all the controllers for us
 });

@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = ['$stateProvider', '$urlRouterProvider', routerConfig];
 
 function routerConfig($stateProvider, $urlRouterProvider) {
@@ -26,7 +24,7 @@ function routerConfig($stateProvider, $urlRouterProvider) {
       name: 'gallery',
       url: '/gallery',
       template: require('../view/gallery/gallery.html'),
-      controller: 'galleryController',
+      controller: 'GalleryController',
       controllerAs: 'galleryCtrl'
     }
   ];
