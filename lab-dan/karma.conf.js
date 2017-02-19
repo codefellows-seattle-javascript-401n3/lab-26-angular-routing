@@ -14,24 +14,36 @@ module.exports = function(config) {
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine'],
 
-
-    // list of files / patterns to load in the browser
-    files: [
-      'test/**/*-test.js'
-    ],
-
-
     // list of files to exclude
     exclude: [
     ],
 
+    files: [
+      // all files ending in "_test"
+      {pattern: 'test/*-test.js', watched: false},
+      {pattern: 'test/**/*-test.js', watched: false}
+      // each file acts as entry point for the webpack configuration
+    ],
 
-    // preprocess matching files before serving them to the browser
-    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      // add webpack as preprocessor
+      'test/*-test.js': ['webpack'],
       'test/**/*-test.js': ['webpack']
     },
 
+    webpack: {
+      // karma watches the test entry points
+      // (you don't need to specify the entry option)
+      // webpack watches dependencies
+
+      // webpack configuration
+    },
+
+    webpackMiddleware: {
+      // webpack-dev-middleware configuration
+      // i. e.
+      stats: 'errors-only'
+    },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
